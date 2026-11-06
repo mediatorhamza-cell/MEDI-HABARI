@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard | MEDI HABARI</title>
+<link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+
+<header class="dashboard-header">
+    <a href="../index.html" class="brand">
+        <img class="brand-logo" src="../assets/medi-habari-logo.jpg" alt="MEDI HABARI logo">
+        <span>
+            <strong>MEDI HABARI</strong>
+            <small>ADMIN PORTAL</small>
+        </span>
+    </a>
+
+    <div class="header-actions">
+        <a href="../index.html">Tazama tovuti ↗</a>
+        <button id="logoutButton">LOG OUT</button>
+    </div>
+</header>
+
+<main class="dashboard">
+
+    <div class="welcome">
+        <div>
+            <span>ADMINISTRATION</span>
+            <h1>Dashboard</h1>
+            <p>Karibu kwenye mfumo wa usimamizi wa MEDI HABARI.</p>
+        </div>
+    </div>
+
+    <section class="stats">
+        <div class="stat">
+            <span>JUMLA YA HABARI</span>
+            <strong id="newsCount">0</strong>
+        </div>
+
+        <div class="stat">
+            <span>JUMLA YA MATUKIO</span>
+            <strong id="eventCount">0</strong>
+        </div>
+    </section>
+
+    <section class="dashboard-grid">
+
+        <div class="panel">
+            <h2 id="formHeading">Ongeza Habari Mpya</h2>
+
+            <form id="newsForm">
+
+                <input type="hidden" id="newsId">
+
+                <label>Kichwa cha habari</label>
+                <input id="newsTitle" required maxlength="180">
+
+                <label>Category</label>
+                <select id="newsCategory" required>
+                    <option value="Kitaifa">Kitaifa</option>
+                    <option value="Kimataifa">Kimataifa</option>
+                    <option value="Biashara">Biashara</option>
+                    <option value="Michezo">Michezo</option>
+                    <option value="Teknolojia">Teknolojia</option>
+                    <option value="Burudani">Burudani</option>
+                </select>
+
+                <label>Image URL</label>
+                <input type="url" id="newsImage"
+                placeholder="https://example.com/image.jpg">
+
+                <label>Muhtasari wa habari</label>
+                <textarea id="newsSummary" rows="3" required></textarea>
+
+                <label>Habari kamili</label>
+                <textarea id="newsBody" rows="8" required></textarea>
+
+                <label class="checkbox-label">
+                    <input type="checkbox" id="featured">
+                    Weka kama habari kuu
+                </label>
+
+                <div class="button-group">
+                    <button type="submit" class="primary-button"
+                    id="saveNews">HIFADHI HABARI</button>
+
+                    <button type="button" class="secondary-button"
+                    id="cancelEdit">GHAIRI</button>
+                </div>
+
+                <p id="newsMessage"></p>
+            </form>
+        </div>
+
+        <div class="panel">
+            <h2>Habari Zilizochapishwa</h2>
+            <div id="newsList"></div>
+        </div>
+
+    </section>
+
+    <section class="dashboard-grid events-section">
+
+        <div class="panel">
+            <h2>Ongeza Tukio</h2>
+
+            <form id="eventForm">
+
+                <label>Jina la tukio</label>
+                <input id="eventTitle" required>
+
+                <label>Tarehe</label>
+                <input type="date" id="eventDate" required>
+
+                <label>Eneo</label>
+                <input id="eventLocation">
+
+                <label>Maelezo</label>
+                <textarea id="eventDescription" rows="4" required></textarea>
+
+                <button class="primary-button" type="submit">
+                    HIFADHI TUKIO
+                </button>
+
+                <p id="eventMessage"></p>
+
+            </form>
+        </div>
+
+        <div class="panel">
+            <h2>Matukio Yaliyopo</h2>
+            <div id="eventList"></div>
+        </div>
+
+    </section>
+
+</main>
+
+<script type="module" src="../js/admin.js"></script>
+</body>
+</html>

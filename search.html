@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="sw"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Tafuta | MEDI HABARI</title><link rel="stylesheet" href="./css/style.css"><link rel="stylesheet" href="./css/responsive.css"></head>
+<body>
+<div id="sideOverlay" class="side-overlay" onclick="closeSidebar()"></div>
+<aside id="sideBar" class="side-bar" aria-label="Menyu kuu">
+  <div class="side-head"><strong>MENU</strong><button class="close-menu" onclick="closeSidebar()" aria-label="Funga menyu">×</button></div>
+  <nav class="side-links">
+    <a href="./index.html"><span class="menu-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></svg></span><span>Mwanzo</span></a>
+    <a href="./category.html?cat=siasa"><span class="menu-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21h16M6 21V8h12v13M4 8h16L12 3 4 8Zm5 4v2m4-2v2m-4 3v2m4-2v2"/></svg></span><span>Siasa</span></a>
+    <a href="./category.html?cat=uchumi"><span class="menu-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5m0 14h17M7 15l4-4 3 2 6-7"/><path d="M16 6h4v4"/></svg></span><span>Uchumi</span></a>
+    <a href="./category.html?cat=jamii"><span class="menu-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-4 2-6 6-6s6 2 6 6m0-5c3-1 6 1 6 5"/></svg></span><span>Jamii</span></a>
+    <a href="./category.html?cat=michezo"><span class="menu-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m12 3 3 5-3 4-5-1-2-5m13 0-3 5 3 4 4-1M7 11l-2 7 6 3 4-4-3-5m3 5 5 1"/></svg></span><span>Michezo</span></a>
+    <a href="./category.html?cat=burudani"><span class="menu-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V5l12-2v13M9 8l12-2"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></span><span>Burudani</span></a>
+    <a href="./category.html?cat=teknolojia"><span class="menu-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8m-4-4v4M7 9l3 2-3 2m5 0h3"/></svg></span><span>Teknolojia</span></a>
+    <a href="./category.html?cat=elimu"><span class="menu-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m2 8 10-5 10 5-10 5L2 8Zm4 3v6c4 3 8 3 12 0v-6m4-3v7"/></svg></span><span>Kitaaluma</span></a>
+    <a href="./events.html"><span class="menu-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4m10-4v4M3 10h18m-12 4h2m3 0h2m-7 3h2"/></svg></span><span>Matukio</span></a>
+    <a href="./search.html"><span class="menu-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg></span><span>Tafuta habari</span></a>
+    <a href="./magazeti.html"><span class="menu-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h11l4 4v14H5zM16 3v5h4M8 12h9M8 16h9M8 8h4"/></svg></span><span>Magazeti A4</span></a>
+    <div class="side-divider"></div>
+    <a class="admin-side-link" href="./admin/login.html"><span class="menu-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="m19.4 15 .1.1 1.4 1.1-1.5 2.6-1.7-.7a8 8 0 0 1-1.8 1l-.3 1.9h-3l-.3-1.9a8 8 0 0 1-1.8-1l-1.7.7-1.5-2.6 1.5-1.2a7 7 0 0 1 0-2l-1.5-1.2 1.5-2.6 1.7.7a8 8 0 0 1 1.8-1L12 7h3l.3 1.9a8 8 0 0 1 1.8 1l1.7-.7 1.5 2.6-1.5 1.2a7 7 0 0 1 0 2Z"/></svg></span><span>Admin Portal</span></a>
+  </nav>
+</aside>
+<header class="site-header">
+  <div class="utility-bar"><div class="container utility-inner"><span>MEDI HABARI</span><span id="todayDate"></span></div></div>
+  <div class="masthead sticky-masthead"><div class="container masthead-inner">
+    <button class="mobile-menu" id="menuBtn" aria-label="Fungua menyu" title="Fungua menyu"><span></span><span></span><span></span></button>
+    <a class="logo" href="./index.html"><img class="logo-img" src="./assets/medi-habari-logo.jpg" alt="MEDI HABARI"></a>
+  </div></div>
+
+  <nav class="desktop-top-nav" aria-label="Menyu ya tovuti"><div class="container desktop-nav-inner">
+<a href="./index.html">Mwanzo</a><a href="./category.html?cat=siasa">Siasa</a><a href="./category.html?cat=uchumi">Uchumi</a><a href="./category.html?cat=jamii">Jamii</a><a href="./category.html?cat=michezo">Michezo</a><a href="./category.html?cat=burudani">Burudani</a><a href="./category.html?cat=teknolojia">Teknolojia</a><a href="./category.html?cat=elimu">Kitaaluma</a><a href="./events.html">Matukio</a></div></nav>
+  <div class="ticker"><div class="container ticker-inner"><span class="ticker-label">MPYA</span><div class="ticker-window"><div class="ticker-track" id="tickerTrack"></div></div></div></div>
+</header>
+<main class="container section"><div class="search-box-page"><span>TAFUTA HABARI</span><h1>Pata habari unayotafuta</h1><form id="searchForm"><input id="searchInput" type="search" placeholder="Mfano: uchaguzi, uchumi, michezo..." required><button>TAFUTA</button></form></div><div class="search-info" id="searchInfo"></div><div class="news-grid" id="searchResults"></div></main>
+<footer class="footer"><div class="container footer-grid"><div><a class="footer-brand" href="./index.html">MEDI HABARI</a><p>Ni zaidi ya habari. Habari kwa mtazamo mpana, kwa lugha rahisi na kwa mpangilio unaosomeka.</p></div><div><h4>Kurasa</h4><a href="./index.html">Mwanzo</a><a href="./events.html">Matukio</a><a href="./magazeti.html">Magazeti A4</a><a href="./search.html">Tafuta</a><a href="./admin/login.html">Admin Portal</a></div><div><h4>Mitandao</h4><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a><a href="https://x.com/" target="_blank" rel="noopener">X</a><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a><a href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok</a></div></div><div class="copyright">© <span id="year"></span> MEDI HABARI — Ni zaidi ya habari.</div></footer>
+<script src="./js/app.js"></script><script src="./js/articles.js"></script><script src="./js/search.js"></script>
+</body></html>
